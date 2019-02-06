@@ -1,0 +1,12 @@
+$background-color: #aaabbb;
+$primary-font-color: white;
+
+// CSS Reset
+@import './reset.scss';
+
+html {
+  background-color:  $background-color;
+  body {
+    color: $primary-font-color;
+  }
+}

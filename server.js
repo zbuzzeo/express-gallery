@@ -3,6 +3,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
+const routesListings = require('./routes/listings');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -14,6 +15,9 @@ app.engine('.hbs', exphbs({
   defaultLayout: 'main.hbs'
 }));
 app.set('view engine', '.hbs');
+
+app.use(express.static('./public/css/styles.css'));
+app.use(routesListings);
 
 app.listen(PORT, () => {
   console.log(`listening in on port: ${PORT}`);
