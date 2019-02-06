@@ -1,8 +1,8 @@
-$background-color: #aaabbb;
+$background-color: green;
 $primary-font-color: white;
 
 // CSS Reset
-@import './reset.scss';
+@import 'reset';
 
 html {
   background-color:  $background-color;
