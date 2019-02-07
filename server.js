@@ -16,7 +16,7 @@ app.engine('.hbs', exphbs({
 }));
 app.set('view engine', '.hbs');
 
-app.use(express.static('./public/css/styles.css'));
+app.use(express.static('./public'));
 app.use(routesListings);
 
 app.listen(PORT, () => {

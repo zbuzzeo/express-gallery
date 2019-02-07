@@ -42,6 +42,55 @@ table {
   border-spacing: 0; }
 
 html {
-  background-color: green; }
+  background-color: white; }
   html body {
-    color: white; }
+    color: black; }
+    html body .bounds {
+      background-color: white;
+      height: fit-content;
+      width: 600px;
+      padding: 2em;
+      margin: auto; }
+      html body .bounds #headerContainer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family: "Ubuntu Mono", monospace;
+        background-color: white;
+        padding: 0.8em 0 0.8em 0; }
+        html body .bounds #headerContainer #toHomepage {
+          font-size: 3.4em;
+          letter-spacing: 0.15em;
+          width: fit-content;
+          color: #707070;
+          text-decoration: none; }
+        html body .bounds #headerContainer #welcome {
+          width: 40%;
+          font-size: 0.65em;
+          color: #afafaf;
+          padding: 0.4em 0 0.4em 1em;
+          border-left: 1px solid #afafaf; }
+      html body .bounds #listingsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        height: 120vh;
+        width: 100%; }
+        html body .bounds #listingsContainer #featuredContainer {
+          padding-top: 0.8em;
+          padding-bottom: 0.8em;
+          box-shadow: 0.05em 0.2em 1em #afafaf; }
+          html body .bounds #listingsContainer #featuredContainer #featured {
+            height: 16em;
+            width: 36.3em; }
+        html body .bounds #listingsContainer #otherContainer {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-items: center; }
+          html body .bounds #listingsContainer #otherContainer .listing {
+            box-shadow: 0.05em 0.2em 1em #afafaf;
+            height: 9em;
+            width: 10.8em;
+            margin: 0.8em 0 0.8em 0; }
