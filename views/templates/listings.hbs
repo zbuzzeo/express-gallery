@@ -1,13 +1,18 @@
 <div id="listingsContainer">
+  {{#with featured}}
+  {{!-- in the object being passed in, assign the first photo selected to a "feature" key --}}
   <div id="featuredContainer">
-    <div id="featured"></div>
+    <div id="featured"><img src={{this.link}} alt="" srcset="" class="image"></div>
   </div>
+  {{/with}}
+
   <div id="otherContainer">
-    <div class="listing"></div>
-    <div class="listing"></div>
-    <div class="listing"></div>
-    <div class="listing"></div>
-    <div class="listing"></div>
-    <div class="listing"></div>
-  </div>
+    {{#each listings}}
+    {{!-- assign the rest of the queried photos here... --}}
+    <div class="listing">
+      <div class="thumbnail"><img src={{this.link}} alt="" srcset="" class="image"></div>
+      <p class="author">{{this.author}}<span class="bullet"> • </span><span class="stamp">{{this.updated_at}}</span></p>
+      <p class="description">{{this.description}}</p>
+    </div>
+    {{/each}}
 </div>

@@ -3,12 +3,12 @@
 module.exports = {
 
   development: {
-    client: 'pg',
+    client : 'pg',
     connection: {
       host : 'localhost',
       user : 'zbuzzeo',
       password : 'password',
-      database : 'knex_demo',
+      database : 'express_gallery',
     }
   },
 
