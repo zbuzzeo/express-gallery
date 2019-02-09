@@ -9,9 +9,15 @@ const entries = {
   listings: undefined,
 }
 
-router.get('/', (req, res) => {
-  console.log('hit');
+router.get('/login', (req, res) => {
+  res.render('templates/login');
+});
 
+router.get('/register', (req, res) => {
+  res.render('templates/register');
+})
+
+router.get('/', (req, res) => {
   knex('gallery')
     .select('author', 'link', 'description', 'created_at', 'updated_at')
     .then((selection) => {
@@ -24,8 +30,18 @@ router.get('/', (req, res) => {
     .catch((err) => {
       throw err;
     });
+});
 
-  // res.render('templates/listings');
+router.get('/:id', (req, res) => {
+  const id = req.params.id;
+
+  knex('gallery')
+    .select('author', 'link', 'description', 'created_at', 'updated_at')
+    .where('id', id)
+    .then(console.log)
+    .catch((err) => {
+      throw err;
+    });
 });
 
 module.exports = router;

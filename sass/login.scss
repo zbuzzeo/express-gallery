@@ -1,0 +1,80 @@
+$background-color: white;
+$background-color-2: white;
+$temp-bg-1: #aaabba;
+$temp-bg-2: #307dd3;
+$temp-bg-3: #FF6C00;
+$temp-bg-4: #FFCA00;
+
+$primary-font-color: black;
+$header-font-color: #707070;
+$content-font-color: #afafaf;
+$highlight-font-color: white;
+$primary-font: 'Ubuntu Mono';
+$font-type: monospace;
+$drop-shadow-color: #c9c9c9;
+
+$pad-min: 0.5em;
+$form-height: 15em;
+
+html {
+  body {
+    #login_container {
+      display: flex;
+      justify-content: center;
+      #login_wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $background-color;
+        box-shadow: 0.05em 0.2em 1em $content-font-color;
+        margin: 0;
+        height: $form-height; width: $form-height * 1;
+        label, input, button {
+          font-family: $primary-font, $font-type;
+          color: $header-font-color;
+        }
+        #login_banner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $temp-bg-2;
+          position: relative;
+          bottom: 0.5em;
+          height: 1.6em; width: 100%;
+          .prompt {
+            font-family: $primary-font, $font-type;
+            font-size: 0.9em;
+            color: $highlight-font-color;
+          }
+        }
+        button {
+          color: $highlight-font-color;
+          border: none;
+          box-shadow: 0.05em 0.2em 0.5em $content-font-color;
+        }
+        #login_buttonContainer {
+          display: flex;
+          align-items: flex-end;
+          position: relative;
+          top: 1.8em;
+          width: 100%;
+          .login_buttonLogin {
+            background-color: $temp-bg-2;
+            height: 1.6em; width: 50%;
+          }
+          .login_buttonRegister {
+            background-color: $temp-bg-1;
+            height: 1.6em; width: 50%;
+          }
+        }
+        input {
+          // box-shadow: 0.05em 0.2em 1em $content-font-color;
+          border: 1px solid #cccccc;
+          color: $header-font-color;
+          // width: 100%;
+        }
+      }
+    }
+  }
+}

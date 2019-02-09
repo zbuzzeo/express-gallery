@@ -1,0 +1,50 @@
+html body #register_container {
+  display: flex;
+  justify-content: center; }
+  html body #register_container #register_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0.05em 0.2em 1em #afafaf;
+    margin: 0;
+    height: 15em;
+    width: 15em; }
+    html body #register_container #register_wrap label, html body #register_container #register_wrap input, html body #register_container #register_wrap button {
+      font-family: "Ubuntu Mono", monospace;
+      color: #707070; }
+    html body #register_container #register_wrap #register_banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #307dd3;
+      position: relative;
+      bottom: 0.5em;
+      height: 1.6em;
+      width: 100%; }
+      html body #register_container #register_wrap #register_banner .prompt {
+        font-family: "Ubuntu Mono", monospace;
+        font-size: 0.9em;
+        color: white; }
+    html body #register_container #register_wrap button {
+      color: white;
+      border: none;
+      box-shadow: 0.05em 0.2em 0.5em #afafaf; }
+    html body #register_container #register_wrap #register_buttonContainer {
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      top: 1.8em;
+      width: 100%; }
+      html body #register_container #register_wrap #register_buttonContainer .register_buttonRegister {
+        background-color: #307dd3;
+        height: 1.6em;
+        width: 50%; }
+      html body #register_container #register_wrap #register_buttonContainer .register_buttonLogin {
+        background-color: #aaabba;
+        height: 1.6em;
+        width: 50%; }
+    html body #register_container #register_wrap input {
+      border: 1px solid #cccccc;
+      color: #707070; }

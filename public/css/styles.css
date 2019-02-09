@@ -41,6 +41,108 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+html body #login_container {
+  display: flex;
+  justify-content: center; }
+  html body #login_container #login_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0.05em 0.2em 1em #afafaf;
+    margin: 0;
+    height: 15em;
+    width: 15em; }
+    html body #login_container #login_wrap label, html body #login_container #login_wrap input, html body #login_container #login_wrap button {
+      font-family: "Ubuntu Mono", monospace;
+      color: #707070; }
+    html body #login_container #login_wrap #login_banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #307dd3;
+      position: relative;
+      bottom: 0.5em;
+      height: 1.6em;
+      width: 100%; }
+      html body #login_container #login_wrap #login_banner .prompt {
+        font-family: "Ubuntu Mono", monospace;
+        font-size: 0.9em;
+        color: white; }
+    html body #login_container #login_wrap button {
+      color: white;
+      border: none;
+      box-shadow: 0.05em 0.2em 0.5em #afafaf; }
+    html body #login_container #login_wrap #login_buttonContainer {
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      top: 1.8em;
+      width: 100%; }
+      html body #login_container #login_wrap #login_buttonContainer .login_buttonLogin {
+        background-color: #307dd3;
+        height: 1.6em;
+        width: 50%; }
+      html body #login_container #login_wrap #login_buttonContainer .login_buttonRegister {
+        background-color: #aaabba;
+        height: 1.6em;
+        width: 50%; }
+    html body #login_container #login_wrap input {
+      border: 1px solid #cccccc;
+      color: #707070; }
+
+html body #register_container {
+  display: flex;
+  justify-content: center; }
+  html body #register_container #register_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0.05em 0.2em 1em #afafaf;
+    margin: 0;
+    height: 15em;
+    width: 15em; }
+    html body #register_container #register_wrap label, html body #register_container #register_wrap input, html body #register_container #register_wrap button {
+      font-family: "Ubuntu Mono", monospace;
+      color: #707070; }
+    html body #register_container #register_wrap #register_banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #307dd3;
+      position: relative;
+      bottom: 0.5em;
+      height: 1.6em;
+      width: 100%; }
+      html body #register_container #register_wrap #register_banner .prompt {
+        font-family: "Ubuntu Mono", monospace;
+        font-size: 0.9em;
+        color: white; }
+    html body #register_container #register_wrap button {
+      color: white;
+      border: none;
+      box-shadow: 0.05em 0.2em 0.5em #afafaf; }
+    html body #register_container #register_wrap #register_buttonContainer {
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      top: 1.8em;
+      width: 100%; }
+      html body #register_container #register_wrap #register_buttonContainer .register_buttonRegister {
+        background-color: #307dd3;
+        height: 1.6em;
+        width: 50%; }
+      html body #register_container #register_wrap #register_buttonContainer .register_buttonLogin {
+        background-color: #aaabba;
+        height: 1.6em;
+        width: 50%; }
+    html body #register_container #register_wrap input {
+      border: 1px solid #cccccc;
+      color: #707070; }
+
 html {
   background-color: white; }
   html body {
@@ -56,7 +158,10 @@ html {
         align-items: center;
         font-family: "Ubuntu Mono", monospace;
         background-color: white;
-        padding: 0.5em 0 0.5em 0; }
+        padding: 0.5em 0 0.5em 0;
+        margin-bottom: 2em;
+        margin-top: 2em;
+        border-top: 0.05em solid #c9c9c9; }
         html body .bounds #headerContainer #toHomepage {
           font-size: 3.4em;
           letter-spacing: 0.15em;
@@ -68,7 +173,7 @@ html {
           font-size: 0.65em;
           color: #afafaf;
           padding: 0.25em 0 0.25em 1em;
-          border-left: 1px solid #afafaf; }
+          border-left: 0.05em solid #c9c9c9; }
       html body .bounds #listingsContainer {
         display: flex;
         flex-wrap: wrap;
@@ -79,7 +184,7 @@ html {
         html body .bounds #listingsContainer #featuredContainer {
           margin-top: 0.5em;
           margin-bottom: 0.5em;
-          box-shadow: 0.05em 0.2em 1em #afafaf; }
+          box-shadow: 0.05em 0.2em 1em #c9c9c9; }
           html body .bounds #listingsContainer #featuredContainer #featured {
             height: 20em;
             width: 36.3em;
@@ -94,6 +199,9 @@ html {
           align-items: center;
           overflow: scroll; }
           html body .bounds #listingsContainer #otherContainer .listing {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             box-shadow: 0.05em 0.2em 1em #c9c9c9;
             height: 9.4em;
             width: 11.28em;
@@ -104,6 +212,8 @@ html {
               text-overflow: ellipsis;
               white-space: nowrap;
               overflow: hidden; }
+            html body .bounds #listingsContainer #otherContainer .listing .description, html body .bounds #listingsContainer #otherContainer .listing .author {
+              margin-left: 0.4em; }
             html body .bounds #listingsContainer #otherContainer .listing .thumbnail {
               background-color: white;
               height: 7.4em;
@@ -113,14 +223,14 @@ html {
                 width: 100%; }
             html body .bounds #listingsContainer #otherContainer .listing .author {
               color: #afafaf;
-              font-size: 0.7em; }
+              font-size: 0.6em; }
               html body .bounds #listingsContainer #otherContainer .listing .author .bullet {
                 position: relative;
                 top: 0.09em; }
               html body .bounds #listingsContainer #otherContainer .listing .author .stamp {
                 position: relative;
                 bottom: 0.1em;
-                font-size: 0.6em; }
+                font-size: 0.7em; }
             html body .bounds #listingsContainer #otherContainer .listing .description {
               height: 1.1em;
               color: #707070;

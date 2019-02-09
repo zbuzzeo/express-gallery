@@ -1,7 +1,7 @@
 $background-color: white;
 $background-color-2: white;
 $temp-bg-1: #aaabba;
-$temp-bg-2: #094BB3;
+$temp-bg-2: #307dd3;
 $temp-bg-3: #FF6C00;
 $temp-bg-4: #FFCA00;
 
@@ -17,6 +17,9 @@ $cell-height: 9.4em;
 $cell-width: $cell-height * 1.2;
 
 @import 'reset';
+@import 'login';
+@import 'register';
+@import 'gallery-id';
 
 html {
   background-color:  $background-color;
@@ -34,6 +37,8 @@ html {
         font-family: $primary-font, $font-type;
         background-color: $background-color;
         padding: $pad-min 0 $pad-min 0;
+        margin-bottom: 2em; margin-top: 2em;
+        border-top: 0.05em solid $drop-shadow-color;
         #toHomepage {
           font-size: 3.4em;
           // font-weight: bold;
@@ -47,7 +52,7 @@ html {
           font-size: 0.65em;
           color: $content-font-color;
           padding: ($pad-min / 2) 0 ($pad-min / 2) 1em;
-          border-left: 1px solid $content-font-color;
+          border-left: 0.05em solid $drop-shadow-color;
         }
       }
 
@@ -61,7 +66,7 @@ html {
         #featuredContainer {
           // padding-top: $pad-min; padding-bottom: $pad-min;
           margin-top: $pad-min; margin-bottom: $pad-min;
-          box-shadow: 0.05em 0.2em 1em $content-font-color;
+          box-shadow: 0.05em 0.2em 1em $drop-shadow-color;
           #featured {
             // background-color: $temp-bg-3;
             height: 20em; width: 36.3em;
@@ -76,9 +81,13 @@ html {
           flex-wrap: wrap;
           justify-content: space-around;
           align-items: center;
+          // border-top: 0.05em solid $content-font-color;
           overflow: scroll;
           .listing {
             // background-color: $temp-bg-4;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             box-shadow: 0.05em 0.2em 1em $drop-shadow-color;
             height: $cell-height; width: $cell-width;
             margin: $pad-min 0 $pad-min 0;
@@ -90,6 +99,9 @@ html {
               overflow: hidden;
               // text-emphasis: wrap;
             }
+            .description, .author {
+              margin-left: 0.4em;
+            }
             .thumbnail {
               background-color: $background-color-2;
               height: 7.4em; width: 98%;
@@ -99,7 +111,7 @@ html {
             }
             .author {
               color: $content-font-color;
-              font-size: 0.7em;
+              font-size: 0.6em;
               .bullet {
                 position: relative;
                 top: 0.09em;
@@ -107,7 +119,7 @@ html {
               .stamp {
                 position: relative;
                 bottom: 0.1em;
-                font-size: 0.6em;
+                font-size: 0.7em;
               }
             }
             .description {
