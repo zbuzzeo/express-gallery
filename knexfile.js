@@ -3,12 +3,12 @@
 module.exports = {
 
   development: {
-    client : 'pg',
+    client: 'postgresql',
     connection: {
-      host : 'localhost',
-      user : 'zbuzzeo',
-      password : 'password',
-      database : 'express_gallery',
+      database:  'express_gallery',
+      host:      'postgres-primary-db',
+      user:      'zbuzzeo',
+      password:  'password',
     }
   },
 
@@ -31,9 +31,10 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      database:  'express_gallery',
+      host:      'postgres-primary-db',
+      user:      'zbuzzeo',
+      password:  'password',
     },
     pool: {
       min: 2,

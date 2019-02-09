@@ -1,21 +1,13 @@
 'use strict';
 
 const express = require('express');
-const knex = require('../database');
+const knex = require('../database/knex');
 const router = express.Router();
 
 const entries = {
   featured: undefined,
   listings: undefined,
 }
-
-router.get('/login', (req, res) => {
-  res.render('templates/login');
-});
-
-router.get('/register', (req, res) => {
-  res.render('templates/register');
-})
 
 router.get('/', (req, res) => {
   knex('gallery')
