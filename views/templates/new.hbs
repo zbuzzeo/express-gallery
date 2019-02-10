@@ -2,12 +2,14 @@
   <div id="new_tooltip">Submit a post:</div>
 
   <form action="/gallery/post" method="POST" id="new_makePost">
-    <div id="new_inputContainer">
+    {{!-- <div id="new_inputContainer">
       <input type="text" value="author" placeholder="Author" id="new_author">
       <input type="text" value="link" placeholder="URL" id="new_link">
-    </div>
+    </div> --}}
 
     <div id="new_submitContainer">
+      <input type="text" name="author" value="author" placeholder="Author" id="new_author">
+      <input type="text" name="link" value="link" placeholder="URL" id="new_link">
       <textarea name="description" id="new_description" cols="50" rows="10" placeholder="Describe your image here..."></textarea>
       <input type="submit" value="Submit" id="new_submitPost">
     </div>

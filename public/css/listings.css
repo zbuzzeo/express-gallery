@@ -1,0 +1,72 @@
+html {
+  background-color: white; }
+  html body {
+    color: black; }
+    html body .listings_bounds {
+      background-color: white;
+      height: fit-content;
+      width: 600px;
+      margin: auto; }
+      html body .listings_bounds #listingsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        height: fit-content;
+        width: 100%; }
+        html body .listings_bounds #listingsContainer #featuredContainer {
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+          box-shadow: 0.05em 0.2em 1em #c9c9c9; }
+          html body .listings_bounds #listingsContainer #featuredContainer #featured {
+            height: 20em;
+            width: 36.3em;
+            overflow: hidden; }
+            html body .listings_bounds #listingsContainer #featuredContainer #featured .image {
+              border-radius: 0.5em;
+              width: 100%;
+              height: 100%; }
+        html body .listings_bounds #listingsContainer #otherContainer {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-items: center;
+          overflow: scroll; }
+          html body .listings_bounds #listingsContainer #otherContainer .listing {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0.05em 0.2em 1em #c9c9c9;
+            height: 9.4em;
+            width: 11.28em;
+            margin: 0.5em 0 0.5em 0; }
+            html body .listings_bounds #listingsContainer #otherContainer .listing .thumbnail, html body .listings_bounds #listingsContainer #otherContainer .listing .author, html body .listings_bounds #listingsContainer #otherContainer .listing .description {
+              background-color: white;
+              margin: 0.1em;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden; }
+            html body .listings_bounds #listingsContainer #otherContainer .listing .description, html body .listings_bounds #listingsContainer #otherContainer .listing .author {
+              margin-left: 0.4em; }
+            html body .listings_bounds #listingsContainer #otherContainer .listing .thumbnail {
+              background-color: white;
+              height: 7.4em;
+              width: 98%; }
+              html body .listings_bounds #listingsContainer #otherContainer .listing .thumbnail .image {
+                border-radius: 0.5em;
+                height: 100%;
+                width: 100%; }
+            html body .listings_bounds #listingsContainer #otherContainer .listing .author {
+              color: #afafaf;
+              font-size: 0.6em; }
+              html body .listings_bounds #listingsContainer #otherContainer .listing .author .bullet {
+                position: relative;
+                top: 0.09em; }
+              html body .listings_bounds #listingsContainer #otherContainer .listing .author .stamp {
+                position: relative;
+                bottom: 0.1em;
+                font-size: 0.7em; }
+            html body .listings_bounds #listingsContainer #otherContainer .listing .description {
+              height: 1.1em;
+              color: #707070;
+              font-size: 0.7em; }

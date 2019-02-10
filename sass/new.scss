@@ -8,13 +8,16 @@ $temp-bg-4: #FFCA00;
 $primary-font-color: black;
 $header-font-color: #707070;
 $content-font-color: #afafaf;
+$highlight-font-color: white;
 $primary-font: 'Ubuntu Mono';
 $font-type: monospace;
 $drop-shadow-color: #c9c9c9;
 
 $pad-min: 0.5em;
+$thumbnail-radius: 0.5em;
 $cell-height: 9.4em;
 $cell-width: $cell-height * 1.2;
+$form-height: 15em;
 
 html {
   body {

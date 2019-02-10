@@ -2,7 +2,7 @@
   {{#with featured}}
   <div id="gallery_featuredContainer">
     <div id="gallery_photoName">Photo — <a href="www.unsplash.com"><span class="innerText">www.unsplash.com</span></a></div>
-    <div id="gallery_featured"><img src={{link}} alt="" srcset="" class="image"></div>
+    <div id="gallery_featured"><img src={{this.link}} alt="" srcset="" class="image"></div>
 
     <div id="gallery_alterContainer">
       <form action="/" id="gallery_edit" method="PUT">
@@ -28,7 +28,7 @@
     {{#each listings}}
     {{!-- assign the rest of the queried photos here... --}}
     <div class="listing">
-      <div class="thumbnail"><img src={{link}} alt="" srcset="" class="image"></div>
+      <div class="thumbnail"><img src={{link}} alt="" srcset="" onclick="window.location.href='/gallery/{{id}}'" class="image"></div>
       <p class="author">{{author}}<span class="bullet"> • </span><span class="stamp">{{updated_at}}</span></p>
       <p class="description">{{description}}</p>
     </div>

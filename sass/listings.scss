@@ -20,79 +20,42 @@ $cell-width: $cell-height * 1.2;
 $form-height: 15em;
 
 html {
+  background-color:  $background-color;
   body {
-    .bounds {
+    color: $primary-font-color;
+    .listings_bounds {
+      background-color: $background-color;
+      height: fit-content; width: 600px;
+      // padding: 0.5em repeat(3, 2em);
       margin: auto;
-      #gallery_bounds {
+      #listingsContainer {
         display: flex;
-        justify-content: space-between;
-        #gallery_featuredContainer {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        // background-color: $temp-bg-2;
+        height: fit-content; width: 100%;
+        #featuredContainer {
           // padding-top: $pad-min; padding-bottom: $pad-min;
-          display: flex;
-          flex-direction: column;
           margin-top: $pad-min; margin-bottom: $pad-min;
-          #gallery_photoName {
-            font-family: $primary-font, $font-type;
-            color: $header-font-color;
-          }
-          #gallery_featured {
+          box-shadow: 0.05em 0.2em 1em $drop-shadow-color;
+          #featured {
             // background-color: $temp-bg-3;
-            box-shadow: 0.05em 0.2em 1em $drop-shadow-color;
             height: 20em; width: 36.3em;
-            margin: 0.5em 0 0.5em 0;
             overflow: hidden;
             .image {
               border-radius: $thumbnail-radius;
-              height: 20em; width: 100%;
+              width: 100%; height: 100%;
             }
-          }
-          #gallery_alterContainer {
-            display: flex;
-            justify-content: flex-end;
-            height: 1em;
-            #gallery_edit input, #gallery_delete input {
-              background-color: $background-color;
-              font-family: $primary-font, $font-type;
-              font-size: 0.6em;
-              color: $content-font-color;
-              height: 1em;
-              border: none;
-            }
-            #gallery_edit input {
-              border-right: 0.05em solid $content-font-color;
-            }
-          }
-          .author {
-            color: $content-font-color;
-            font-size: 0.6em;
-            .bullet {
-              position: relative;
-              top: 0.09em;
-            }
-            .stamp {
-              font-size: 0.8em;
-            }
-          }
-          .caption {
-            color: $content-font-color;
-            font-size: 0.7em;
-          }
-          .description {
-            color: $header-font-color;
-            font-size: 0.9em;
           }
         }
-        // #gallery_featuredContainer {
-        //   background-color: blue;
-        //   height: 60em; width: 70%;
-        // }
-        #gallery_otherContainer {
+        #otherContainer {
           display: flex;
-          flex-direction: column;
           flex-wrap: wrap;
+          justify-content: space-around;
           align-items: center;
-          margin-top: 1.6em;
           // border-top: 0.05em solid $content-font-color;
+          overflow: scroll;
           .listing {
             // background-color: $temp-bg-4;
             display: flex;
