@@ -6,12 +6,13 @@ const router = express.Router();
 
 const entries = {
   featured: undefined,
+  focus: undefined,
   listings: undefined,
 }
 
 router.get('/', (req, res) => {
   knex('gallery')
-    .select('author', 'link', 'description', 'created_at', 'updated_at')
+    .select('id', 'author', 'link', 'description', 'created_at', 'updated_at')
     .then((selection) => {
       const withoutFeature = selection.filter(x => { return selection.indexOf(x) !== 0 });
 
@@ -24,16 +25,20 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:id', (req, res) => {
-  const id = req.params.id;
+// router.get('/:id', (req, res) => {
+//   const id = req.params.id;
 
-  knex('gallery')
-    .select('author', 'link', 'description', 'created_at', 'updated_at')
-    .where('id', id)
-    .then(console.log)
-    .catch((err) => {
-      throw err;
-    });
-});
+//   knex('gallery')
+//     .select('author', 'link', 'description', 'created_at', 'updated_at')
+//     .where('id', id)
+//     .then((selection) => {
+//       entries.featured = selection[0];
+//       entries.listings = selection;
+//       res.render('templates/detail', entries);
+//     })
+//     .catch((err) => {
+//       throw err;
+//     });
+// });
 
 module.exports = router;

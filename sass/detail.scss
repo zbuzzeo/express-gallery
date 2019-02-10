@@ -16,49 +16,72 @@ $pad-min: 0.5em;
 $cell-height: 9.4em;
 $cell-width: $cell-height * 1.2;
 
-@import 'reset';
-@import 'banner';
-@import 'detail';
-@import 'new';
-@import 'login';
-@import 'register';
-
 html {
-  background-color:  $background-color;
   body {
-    color: $primary-font-color;
     .bounds {
-      background-color: $background-color;
-      height: fit-content; width: 600px;
-      // padding: 0.5em repeat(3, 2em);
-      margin: auto;
-      #listingsContainer {
+      // margin: auto;
+      #gallery_bounds {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        // background-color: $temp-bg-2;
-        height: fit-content; width: 100%;
-        #featuredContainer {
+        justify-content: space-between;
+        #gallery_featuredContainer {
           // padding-top: $pad-min; padding-bottom: $pad-min;
+          display: flex;
+          flex-direction: column;
           margin-top: $pad-min; margin-bottom: $pad-min;
-          box-shadow: 0.05em 0.2em 1em $drop-shadow-color;
-          #featured {
+          #gallery_photoName {
+            font-family: $primary-font, $font-type;
+            color: $header-font-color;
+          }
+          #gallery_featured {
             // background-color: $temp-bg-3;
+            box-shadow: 0.05em 0.2em 1em $drop-shadow-color;
             height: 20em; width: 36.3em;
+            margin: 0.5em 0 0.5em 0;
             overflow: hidden;
             .image {
               width: 100%; height: 100%;
             }
           }
+          #gallery_alterContainer {
+            display: flex;
+            justify-content: flex-end;
+            #gallery_edit input, #gallery_delete input {
+              background-color: $background-color;
+              height: 1em;
+              border: none;
+            }
+            #gallery_edit input {
+              border-right: 0.05em solid $header-font-color;
+              padding-bottom: 3em;
+            }
+          }
+          .author {
+            color: $content-font-color;
+            font-size: 0.6em;
+            .stamp {
+              font-size: 0.8em;
+            }
+          }
+          .caption {
+            color: $content-font-color;
+            font-size: 0.7em;
+          }
+          .description {
+            color: $header-font-color;
+            font-size: 0.9em;
+          }
         }
-        #otherContainer {
+        // #gallery_featuredContainer {
+        //   background-color: blue;
+        //   height: 60em; width: 70%;
+        // }
+        #gallery_otherContainer {
           display: flex;
+          flex-direction: column;
           flex-wrap: wrap;
-          justify-content: space-around;
           align-items: center;
+          margin-top: 1.6em;
           // border-top: 0.05em solid $content-font-color;
-          overflow: scroll;
           .listing {
             // background-color: $temp-bg-4;
             display: flex;

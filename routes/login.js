@@ -39,7 +39,8 @@ passport.use(new LocalStrategy(function (username, password, done) {
 }));
 
 router.post('/', passport.authenticate('local', {
-  successRedirect: '/gallery',
+  successRedirect: '/',
   failureRedirect: '/login'
 }));
+
 module.exports = router;

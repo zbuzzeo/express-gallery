@@ -10,6 +10,7 @@ const bcrypt = require('bcryptjs');
 const redis = require('connect-redis')(session);
 
 const routesListings = require('./routes/listings');
+const routesGallery = require('./routes/gallery');
 const routesLogin = require('./routes/login');
 const routesRegister = require('./routes/register');
 const routesLogout = require('./routes/logout');
@@ -37,7 +38,8 @@ app.engine('.hbs', exphbs({
 }));
 app.set('view engine', '.hbs');
 
-app.use(express.static('./public'));
+app.use(express.static('public'));
+app.use('/gallery', express.static('public'));
 
 // PassportJS: write these in before all of the routes are installed so that all routes have sessions sitting in front of it.
 app.use(passport.initialize());
@@ -70,7 +72,6 @@ passport.deserializeUser((user, done) => {
 });
 
 // basic routes that do not need their own file...
-
 const isAuthenticated = (req, res, next) => {
   if (req.isAuthenticated()) { next(); }
   else { res.redirect('/'); }
@@ -84,8 +85,14 @@ app.get('/secret', isAuthenticated, (req, res) => {
   res.send('you found the secret!');
 });
 
+// if somebody tries to go to /gallery
+app.get('/gallery', (req, res) => {
+  res.redirect('/');
+});
+
 // configuring route handlers
-app.use('/gallery', routesListings);
+app.use(routesListings);
+app.use('/gallery', routesGallery);
 app.use('/login', routesLogin);
 app.use('/register', routesRegister);
 app.use('/logout', routesLogout);

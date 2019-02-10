@@ -1,0 +1,37 @@
+<div id="gallery_bounds">
+  {{#with featured}}
+  <div id="gallery_featuredContainer">
+    <div id="gallery_photoName">Photo — <a href="www.unsplash.com"><span class="innerText">www.unsplash.com</span></a></div>
+    <div id="gallery_featured"><img src={{link}} alt="" srcset="" class="image"></div>
+
+    <div id="gallery_alterContainer">
+      <form action="/" id="gallery_edit" method="PUT">
+        <input type="submit" value="edit">
+      </form>
+      <form action="/" id="gallery_delete" method="DELETE">
+        <input type="submit" value="delete">
+      </form>
+    </div>
+
+    <p class="author">{{author}}<span class="bullet"> • </span><span class="stamp">{{updated_at}}</span></p>
+    <p class="caption">"{{description}}"</p>
+
+    <br>
+
+    <p class="description">
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </p>
+  </div>
+  {{/with}}
+
+  <div id="gallery_otherContainer">
+    {{#each listings}}
+    {{!-- assign the rest of the queried photos here... --}}
+    <div class="listing">
+      <div class="thumbnail"><img src={{link}} alt="" srcset="" class="image"></div>
+      <p class="author">{{author}}<span class="bullet"> • </span><span class="stamp">{{updated_at}}</span></p>
+      <p class="description">{{description}}</p>
+    </div>
+    {{/each}}
+  </div>
+</div>

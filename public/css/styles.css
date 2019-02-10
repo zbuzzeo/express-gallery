@@ -41,6 +41,136 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+html {
+  background-color: white; }
+  html body {
+    color: black; }
+    html body .bounds {
+      background-color: white;
+      height: fit-content;
+      width: 600px;
+      margin: auto; }
+      html body .bounds #headerContainer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family: "Ubuntu Mono", monospace;
+        background-color: white;
+        padding: 0.5em 0 0.5em 0;
+        margin-bottom: 2em;
+        margin-top: 2em;
+        border-top: 0.05em solid #c9c9c9; }
+        html body .bounds #headerContainer #toHomepage {
+          font-size: 3.4em;
+          letter-spacing: 0.15em;
+          width: fit-content;
+          color: #707070;
+          text-decoration: none; }
+        html body .bounds #headerContainer #welcome {
+          width: 40%;
+          font-size: 0.65em;
+          color: #afafaf;
+          padding: 0.25em 0 0.25em 1em;
+          border-left: 0.05em solid #c9c9c9; }
+
+html body .bounds #gallery_bounds {
+  display: flex;
+  justify-content: space-between; }
+  html body .bounds #gallery_bounds #gallery_featuredContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; }
+    html body .bounds #gallery_bounds #gallery_featuredContainer #gallery_photoName {
+      font-family: "Ubuntu Mono", monospace;
+      color: #707070; }
+    html body .bounds #gallery_bounds #gallery_featuredContainer #gallery_featured {
+      box-shadow: 0.05em 0.2em 1em #c9c9c9;
+      height: 20em;
+      width: 36.3em;
+      margin: 0.5em 0 0.5em 0;
+      overflow: hidden; }
+      html body .bounds #gallery_bounds #gallery_featuredContainer #gallery_featured .image {
+        width: 100%;
+        height: 100%; }
+    html body .bounds #gallery_bounds #gallery_featuredContainer #gallery_alterContainer {
+      display: flex;
+      justify-content: flex-end; }
+      html body .bounds #gallery_bounds #gallery_featuredContainer #gallery_alterContainer #gallery_edit input, html body .bounds #gallery_bounds #gallery_featuredContainer #gallery_alterContainer #gallery_delete input {
+        background-color: white;
+        height: 1em;
+        border: none; }
+      html body .bounds #gallery_bounds #gallery_featuredContainer #gallery_alterContainer #gallery_edit input {
+        border-right: 0.05em solid #707070;
+        padding-bottom: 3em; }
+    html body .bounds #gallery_bounds #gallery_featuredContainer .author {
+      color: #afafaf;
+      font-size: 0.6em; }
+      html body .bounds #gallery_bounds #gallery_featuredContainer .author .stamp {
+        font-size: 0.8em; }
+    html body .bounds #gallery_bounds #gallery_featuredContainer .caption {
+      color: #afafaf;
+      font-size: 0.7em; }
+    html body .bounds #gallery_bounds #gallery_featuredContainer .description {
+      color: #707070;
+      font-size: 0.9em; }
+  html body .bounds #gallery_bounds #gallery_otherContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1.6em; }
+    html body .bounds #gallery_bounds #gallery_otherContainer .listing {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0.05em 0.2em 1em #c9c9c9;
+      height: 9.4em;
+      width: 11.28em;
+      margin: 0.5em 0 0.5em 0; }
+      html body .bounds #gallery_bounds #gallery_otherContainer .listing .thumbnail, html body .bounds #gallery_bounds #gallery_otherContainer .listing .author, html body .bounds #gallery_bounds #gallery_otherContainer .listing .description {
+        background-color: white;
+        margin: 0.1em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden; }
+      html body .bounds #gallery_bounds #gallery_otherContainer .listing .description, html body .bounds #gallery_bounds #gallery_otherContainer .listing .author {
+        margin-left: 0.4em; }
+      html body .bounds #gallery_bounds #gallery_otherContainer .listing .thumbnail {
+        background-color: white;
+        height: 7.4em;
+        width: 98%; }
+        html body .bounds #gallery_bounds #gallery_otherContainer .listing .thumbnail .image {
+          height: 100%;
+          width: 100%; }
+      html body .bounds #gallery_bounds #gallery_otherContainer .listing .author {
+        color: #afafaf;
+        font-size: 0.6em; }
+        html body .bounds #gallery_bounds #gallery_otherContainer .listing .author .bullet {
+          position: relative;
+          top: 0.09em; }
+        html body .bounds #gallery_bounds #gallery_otherContainer .listing .author .stamp {
+          position: relative;
+          bottom: 0.1em;
+          font-size: 0.7em; }
+      html body .bounds #gallery_bounds #gallery_otherContainer .listing .description {
+        height: 1.1em;
+        color: #707070;
+        font-size: 0.7em; }
+
+html body .bounds #new_container #new_tooltip {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 0.9em;
+  color: #707070; }
+
+html body .bounds #new_container #new_makePost #new_inputContainer {
+  display: flex; }
+
+html body .bounds #new_container #new_makePost #new_submitContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%; }
+
 html body #login_container {
   display: flex;
   justify-content: center; }
@@ -152,28 +282,6 @@ html {
       height: fit-content;
       width: 600px;
       margin: auto; }
-      html body .bounds #headerContainer {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        font-family: "Ubuntu Mono", monospace;
-        background-color: white;
-        padding: 0.5em 0 0.5em 0;
-        margin-bottom: 2em;
-        margin-top: 2em;
-        border-top: 0.05em solid #c9c9c9; }
-        html body .bounds #headerContainer #toHomepage {
-          font-size: 3.4em;
-          letter-spacing: 0.15em;
-          width: fit-content;
-          color: #707070;
-          text-decoration: none; }
-        html body .bounds #headerContainer #welcome {
-          width: 40%;
-          font-size: 0.65em;
-          color: #afafaf;
-          padding: 0.25em 0 0.25em 1em;
-          border-left: 0.05em solid #c9c9c9; }
       html body .bounds #listingsContainer {
         display: flex;
         flex-wrap: wrap;

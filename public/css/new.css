@@ -1,0 +1,12 @@
+html body .bounds #new_container #new_tooltip {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 0.9em;
+  color: #707070; }
+
+html body .bounds #new_container #new_makePost #new_inputContainer {
+  display: flex; }
+
+html body .bounds #new_container #new_makePost #new_submitContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%; }
