@@ -11,6 +11,11 @@ html body .bounds {
       html body .bounds #gallery_bounds #gallery_featuredContainer #gallery_photoName {
         font-family: "Ubuntu Mono", monospace;
         color: #707070; }
+        html body .bounds #gallery_bounds #gallery_featuredContainer #gallery_photoName .innerText {
+          font-family: "Ubuntu Mono", monospace;
+          font-size: 0.5em;
+          color: #afafaf;
+          text-decoration: none; }
       html body .bounds #gallery_bounds #gallery_featuredContainer #gallery_featured {
         box-shadow: 0.05em 0.2em 1em #c9c9c9;
         height: 20em;

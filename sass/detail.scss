@@ -34,6 +34,12 @@ html {
           #gallery_photoName {
             font-family: $primary-font, $font-type;
             color: $header-font-color;
+            .innerText {
+              font-family: $primary-font, $font-type;
+              font-size: 0.5em;
+              color: $content-font-color;
+              text-decoration: none;
+            }
           }
           #gallery_featured {
             // background-color: $temp-bg-3;

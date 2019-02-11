@@ -2,6 +2,7 @@
 
 const express = require('express');
 const exphbs = require('express-handlebars');
+const methodOverride = require('method-override');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const passport = require('passport');
@@ -22,6 +23,7 @@ const SESSION_SECRET = process.env.SESSION_SECRET || 'keyboard cat';
 
 const app = express();
 
+app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(session({

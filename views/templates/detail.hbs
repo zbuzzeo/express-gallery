@@ -1,14 +1,14 @@
 <div id="gallery_bounds">
   {{#with featured}}
   <div id="gallery_featuredContainer">
-    <div id="gallery_photoName">Photo — <a href="www.unsplash.com"><span class="innerText">www.unsplash.com</span></a></div>
-    <div id="gallery_featured"><img src={{this.link}} alt="" srcset="" class="image"></div>
+    <div id="gallery_photoName">Photo — <a href='{{link}}'><span class="innerText">www.unsplash.com</span></a></div>
+    <div id="gallery_featured"><img src={{this.link}} alt="" srcset="" onclick="window.location.href='{{link}}'" class="image"></div>
 
     <div id="gallery_alterContainer">
-      <form action="/" id="gallery_edit" method="PUT">
+      <form action="/gallery/{{id}}/edit" id="gallery_edit" method="GET">
         <input type="submit" value="edit">
       </form>
-      <form action="/" id="gallery_delete" method="DELETE">
+      <form action="/{{id}}" id="gallery_delete" method="DELETE">
         <input type="submit" value="delete">
       </form>
     </div>
