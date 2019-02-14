@@ -1,0 +1,31 @@
+html {
+  background-color: white; }
+  html body {
+    color: black; }
+    html body .bounds {
+      background-color: white;
+      height: fit-content;
+      width: 600px;
+      margin: auto; }
+      html body .bounds #headerContainer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family: "Ubuntu Mono", monospace;
+        background-color: white;
+        padding: 0.5em 0 0.5em 0;
+        margin-bottom: 2em;
+        margin-top: 2em;
+        border-top: 0.05em solid #c9c9c9; }
+        html body .bounds #headerContainer #toHomepage {
+          font-size: 3.4em;
+          letter-spacing: 0.15em;
+          width: fit-content;
+          color: #707070;
+          text-decoration: none; }
+        html body .bounds #headerContainer #welcome {
+          width: 40%;
+          font-size: 0.65em;
+          color: #afafaf;
+          padding: 0.25em 0 0.25em 1em;
+          border-left: 0.05em solid #c9c9c9; }
